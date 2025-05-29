@@ -10,26 +10,75 @@
 }
 
 .header {
+    margin-top: 30px;
     margin-bottom: 45px;
 }
 
-
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
 .header-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 36px;
+    margin-bottom: 25px;
 }
 
+.login {
+    color: rgb(10, 20, 58);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+.company-name {
+    color: rgb(10, 20, 58);
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+}
 
 .header-search {
     display: flex;
+
 }
 
 .text-header {
     width: 100%;
+    /* position: relative; */
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    border: 3px solid rgb(37, 110, 235);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
 }
 
+.header-button {
+    border-radius: 5px;
+    background: rgb(37, 110, 235);
+    border: none;
+    color: white;
+    height: 100%;
+    padding: 10px 15px;
+    margin-left: 25px;
+}
+
+.button-search {
+    color: white;
+    border-radius: 5px;
+    background: rgb(37, 110, 235);
+    padding: 14px 20px 14px;
+    /* position: absolute; */
+
+}
 
 /* main */
 
@@ -42,6 +91,9 @@
 
 .main-right {
     width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .item-block {
@@ -147,4 +199,12 @@
 .block-main-2 {
     margin-bottom: 25px;
     margin-top: 25px;
+}
+
+.footer-info {
+    color: rgb(196, 196, 196);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
 }
