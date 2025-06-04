@@ -30,15 +30,6 @@
     margin-bottom: 25px;
 }
 
-.login {
-    color: rgb(10, 20, 58);
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    text-decoration: none;
-}
-
 .company-name {
     color: rgb(10, 20, 58);
     font-family: Roboto;
@@ -80,8 +71,12 @@
     color: white;
     height: 100%;
     padding: 10px 15px;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     cursor: pointer;
+}
+.login {
+    background-color: #fff;
+    color: black;
 }
 
 .button-search {
@@ -347,7 +342,7 @@
 }
 
 
-/* Модальное окно */
+/* Модальное окно входа и регистрации*/
 
 .modal__login {
     position: fixed;
@@ -356,14 +351,123 @@
     transform: translate(-50%, -50%);
     z-index: 9999;
     background: #f4f6fa;
-}
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
+    height: 350px;
+    display: none;
+}   
 
 .modal__login-box {
-    max-width: 500px;
+     max-width: 500px;
     padding: 25px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    
+}
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal__login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.modal-title {
+    margin-bottom: 20px;
+}
+.modal-form-password,
+.modal-form-username {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+.btn-modal-sent {
+    background-color: rgb(37, 110, 235);
+    color: white;
+    font-size: 16px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+.modal-other-variants {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
 }
 
 
+/* Модальное окно регистрации */
+
+.modal__reg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: #f4f6fa;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
+    height: 350px;
+    display: none;
+}  
+
+.modal__reg-box {
+     max-width: 500px;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    
+}
+.modal-reg-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.modal__reg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.reg-input {
+     width: 100%;
+    padding: 2px;
+    border-radius: 5px;
+    outline: none;
+}
+.btn-modal {
+    background-color: rgb(37, 110, 235);
+    color: white;
+    font-size: 16px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.consent-block {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+.consent-block a {
+    color: black;
+}
 
 @media (max-width: 1200px) {
     .container {

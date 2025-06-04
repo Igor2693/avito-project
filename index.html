@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/main.js" defer></script>
+    <script src="/modal-reg.js" defer></script>
     <title>Avito</title>
     <link
         href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZmG5cJc6WxiXOl+olzpbSHJpweAczIwYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcxYaOJs+X/ybPl/8mz5f/Js+X/ybPl/8lzZa8CTMkBgAAAAAAAAAAq0NvSvVnoJy3TXZiAAAAAAAAAAASZko6Js+X/ybPl/8mz5f/Js+X/ybPl/8mz5f/Js+X/xuZcG4AAAAAeTNOLPdpofz3aaH/92mh/3s0UFYAAAAAIcuSjibPl/8mz5f/Js+X/ybPl/8mz5f/Js+X/ybPl/8lzpbCAAAAAHs0UFj3aaH/92mh//dpof/iY4uEAAAAACXOlaImz5f/Js+X/ybPl/8mz5f/Js+X/ybPl/8mz5f/Jc6W1gAAAAA9GScS92ig3vdpof/2aKDweTNOLAAAAAAam3B6Js+X/ybPl/8mz5f/Js+X/ybPl/8mz5f/Js+X/yXOlawAAAAAAAAAAD0ZJw57NFBCXRlIFgAAAAAAAAAACVNFGCbOlvAmz5f/Js+X/ybPl/8mz5f/Js+X/ybPl/8SZ0o+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYmGxCJc6X7ibPl/8mz5f/Js+X/ybOl/ocm29qAAAAAAAAAAAAAAAAPykACH9UACR/KgAMAAAAAAAAAAAAAAAAAAAAAAkzJRQSkWBsI86VkBiVbngSZUokAAAAAAAAAAAAAAAAv38AZv+qAPD/qgD//6oA+L9/AIY/KQAEAAAAAAAAAAAAAAAALy9/JDEwf1wwMH80AAAAAAAAAAAAAAAAv34AVP+qAP//qgD//6oA//+qAP//qgD/v38AgAAAAAAAAAAASke/XmNh//pjYf//Y2H//2Fg/4wAAAAAAAAAAP+pAMr/qgD//6oA//+qAP//qgD//6oA//+qAPI/KgAEFRU/BGJg//JjYf//Y2H//2Nh//9iYP//MS9/KgAAAAD/qQDk/6oA//+qAP//qgD//6oA//+qAP//qgD/f1MAEDEufxhjYf//Y2H//2Nh//9jYf//Y2H//zEvf0oAAAAA/6gAsP+qAP//qgD//6oA//+qAP//qgD//6kA3AAAAAAAAAAAYmD/0mNh//9jYf//Y2H//2Jh//IuLX8WAAAAAH9SACb/qgDy/6oA//+qAP//qgD//6kA/L96AEgAAAAAAAAAABgYPypiYP/KYmD//2Ng/+BGRL9GAAAAAAAAAAAAAAAAf0oAIv+oAKT/qQDQ/6kAsn9UADYAAAAAAAAAAAAAAAAAAAAAAAAAAC0tfwgAAAAAAAAAAAAAAAAAAAAA/8cAAP8BAADvAQAAxgAAAMIAAADHAAAA/wEAAP+DAAD/7wAAw/8AAIHDAAABgwAAAYMAAAGDAACDxwAAx/8AAA=="
@@ -25,8 +26,8 @@
                 </a>
                 <!-- /.logo-block -->
                 <div class="header-link">
-                    <a href="#" class="login">Вход и регистрация</a>
-                    <button class="header-button">Подать объявление</button>
+                    <button class="header-button login">Вход и регистрация</button>
+                    <button class="header-button add">Подать объявление</button>
                 </div>
                 <div class="burger-munu">
                     <img src="/img/burger-menu.png" alt="menu">
@@ -155,14 +156,12 @@
                         <img src="/img/map-infoblock-close.png" alt="icon modal close" class="modal-close-img">
                     </div>
                     <h3 class="modal-title">Для авторизации введите логин и пароль</h3>
-                    <form action="#">
+                    <form action="#" class="modal__login-form">
                         <div class="form-group">
-                            <span>Логин</span>
-                            <input type="text" class="modal-form-login">
+                            <input type="text" class="modal-form-username" placeholder="Введите логин">
                         </div>
                         <div class="form-group">
-                            <span>Пароль</span>
-                            <input type="text" class="modal-form-password">
+                            <input type="text" class="modal-form-password" placeholder="Введите пароль">
                         </div>
                         <div class="form-action">
                             <button type="submit" class="btn-modal-sent">Войти</button>
@@ -174,6 +173,46 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+             <div class="modal__reg">
+                <div class="modal__reg-box">
+                    <div class="modal-reg-close">
+                        <img src="/img/map-infoblock-close.png" alt="icon modal close" class="reg-close-img">
+                    </div>
+                    <h3 class="modal-reg-title">Регистрация нового пользователя</h3>
+                    <form action="#" class="modal__reg-form">
+                        <div class="form-reg-group">
+                            <input type="text" class="reg-input reg-form-login" placeholder="Введите логин">
+                        </div>
+                        <div class="form-reg-group">
+                            <input type="text" class="reg-input reg-form-password" placeholder="Введите пароль">
+                        </div>
+                        <div class="form-reg-group">
+                            <input type="text" class="reg-input reg-form-email" placeholder="Введите почту">
+                        </div>
+                        <div class="form-reg-group">
+                            <input type="text" class="reg-input reg-form-name" placeholder="Введите имя и фамилию">
+                        </div>
+                        <div class="form-action">
+                            <button type="submit" class="btn-modal">Регистрация</button>
+                        </div>
+                        <div class="consent-block">
+                            <input type="checkbox" name="" id="consent" required>
+                            <p>
+                                <a href="#">Согласие</a>
+                                на обработку персональных данных
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
         </div>
     </section>
 
